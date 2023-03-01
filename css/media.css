@@ -1,0 +1,81 @@
+ /* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+ .wrap{
+    flex-wrap: wrap;
+ }
+  }
+
+ /* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .nav-menu{
+        max-height: 0;
+        overflow: hidden;
+}
+
+.navbar label{
+    display: block !important;
+}
+
+.navbar ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.navbar #menu:checked ~ .nav-menu{
+    max-height: 1000px;
+    overflow: visible;
+    padding: 20px;
+}
+
+    .nav-menu a::after{
+        width: 30px;
+    }
+
+    .nav-menu .active::after{
+        width: 30px;
+    }
+
+    .nav-menu li{
+        margin: 5px 0;
+        padding: 5px 0;
+    }
+ }
+
+
+
+ /* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .navbar label{
+        display: none;
+    }
+  }
+
+
+
+ /* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .navbar label{
+        display: none;
+    }
+  }
+
+
+
+
+/*  `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    .navbar label{
+        display: none;
+    }
+  }
